@@ -1,6 +1,8 @@
-$primary-color: white;
-$bg: black;
-h1 {
-  color: $primary-color;
-  background-color: $bg;
+/* ===================== */
+/* === GLOBAL STYLES === */
+/* ===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }

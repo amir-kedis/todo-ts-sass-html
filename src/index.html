@@ -8,11 +8,129 @@
 </head>
 
 <body>
-  <p class="test">
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate fugit
-    recusandae dolorum, eligendi illum culpa fugiat voluptates nemo facere,
-    reprehenderit aliquid iusto sit, quis nihil ipsa aut non voluptas? Enim?
-  </p>
+  <div id="app">
+    <div class="left_side_bar">
+      <h1 class="title">Teminal TODO</h1>
+      <ul class="view_lists">
+        <li class="view_item">
+          <i class="view_item__icon"></i>
+          <span class="view_item__text">Today</span>
+          <span class="view_item__count">14</span>
+        </li>
+        <li class="view_item">
+          <i class="view_item__icon"></i>
+          <span class="view_item__text">Tomorrow</span>
+          <span class="view_item__count">3</span>
+        </li>
+        <li class="view_item">
+          <i class="view_item__icon"></i>
+          <span class="view_item__text">This week</span>
+          <span class="view_item__count">7</span>
+        </li>
+        <li class="view_item">
+          <i class="view_item__icon"></i>
+          <span class="view_item__text">All</span>
+          <span class="view_item__count">17</span>
+        </li>
+      </ul>
+      <ul class="project_lists">
+        <h2 class="project_lists__title">Projects</h2>
+        <li class="project_item">
+          <i class="project_item__icon"></i>
+          <span class="project_item__text">Inbox</span>
+          <span class="project_item__count">3</span>
+        </li>
+        <li class="project_item">
+          <i class="project_item__icon"></i>
+          <span class="project_item__text">Programming</span>
+          <span class="project_item__count">3</span>
+        </li>
+        <li class="project_item">
+          <i class="project_item__icon"></i>
+          <span class="project_item__text">Life Admin</span>
+          <span class="project_item__count">3</span>
+        </li>
+      </ul>
+      <div class="add_project">
+        <i class="add_project__icon"></i>
+        <span class="add_project__text">Add Project</span>
+      </div>
+    </div>
+    <div class="main_content">
+      <div class="add_task_box">
+        <input type="text" class="add_task_box__input" placeholder="Add a task..." />
+        <button class="add_task_box__button">
+          <i class="add_task_box__button__icon"></i>
+        </button>
+        <div class="task_box__modifiers">
+          <button class="task_date_modifier">
+            <i class="task_date_modifier__icon"></i>
+          </button>
+          <button class="task_priority_modifier">
+            <i class="task_priority_modifier__icon"></i>
+          </button>
+          <button class="task_project_modifier">
+            <i class="task_project_modifier__icon"></i>
+          </button>
+        </div>
+      </div>
+      <div class="task_lists">
+        <div class="task_list">
+          <div class="task_list__header">
+            <h2 class="task_list__header__title">Today</h2>
+          </div>
+          <ul class="task_list__items">
+            <li class="task_list__item">
+              <div class="task_list__item__checkbox"></div>
+              <div class="task_list__item__text">Buy milk</div>
+              <div class="task_list__item__date">12sep</div>
+              <div class="task_list__item__project">Inbox</div>
+            </li>
+            <li class="task_list__item">
+              <div class="task_list__item__checkbox"></div>
+              <div class="task_list__item__text">Do Laundary</div>
+              <div class="task_list__item__date">12sep</div>
+              <div class="task_list__item__project">Life Admin</div>
+            </li>
+            <li class="task_list__item">
+              <div class="task_list__item__checkbox"></div>
+              <div class="task_list__item__text">Study Alx</div>
+              <div class="task_list__item__date">12sep</div>
+              <div class="task_list__item__project">Programming</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right_side_bar">
+        <div class="task_edit_box">
+          <div class="task_edit_box__header">
+            <div class="task_edit_box__checkbox"></div>
+            <div class="task_edit_box__date">12sep</div>
+            <div class="task_edit_box__priority">
+              <i class="task_edit_box__priority__icon"></i>
+            </div>
+          </div>
+          <div class="task_edit_box__content">
+            <div class="task_edit_box__content__text" contenteditable="true">Buy milk</div>
+            <div class="task_edit_box__description" contenteditable="true">Description...</div>
+          </div>
+          <div class="task_edit_box__footer">
+            <i class="task_edit_box__footer__icon"></i>
+            <div class="task_edit_box__project">Inbox</div>
+          </div>
+        </div>
+        <div class="qoute_box">
+          <div class="qoute_box__icon">
+            <i class="qoute_box__icon__icon"></i>
+          </div>
+          <div class="qoute_box__text">
+            <p class="qoute_box__text__content">“You have power over your mind – not outside events. Realize this, and
+              you will find strength.”</p>
+            <p class="qoute_box__text__author">- Marcus Aurelius</p>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 
 </html>
