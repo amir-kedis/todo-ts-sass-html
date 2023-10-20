@@ -1,11 +1,8 @@
 import "./styles.scss";
+import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawsome/fontawesome-free/css/solid.css";
+import "@fortawesome/fontawesome-free/css/brands.css";
 
-function main() {
-  const app = document.createElement("div");
-
-  app.id = "app";
-
-  document.body.appendChild(app);
-}
+function main() { }
 
 main();
