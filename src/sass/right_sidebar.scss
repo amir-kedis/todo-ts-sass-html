@@ -1,0 +1,48 @@
+.left_side_bar {
+  .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+
+  .view_item,
+  .project_item {
+    display: flex;
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    &__count {
+      margin-left: auto;
+      color: #17a600;
+      font-weight: 900;
+      font-size: 1.2rem;
+    }
+  }
+  .project_lists__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2983a6;
+  }
+
+  .add_project {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #2983a6;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+  }
+}

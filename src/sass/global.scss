@@ -1,0 +1,21 @@
+/* ===================== */
+/* === GLOBAL STYLES === */
+/* ===================== */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap");
+* {
+  font-family: "Fira Code", monospace;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================== */
+/* === LAYOUT STYLES === */
+/* ===================== */
+#app {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
