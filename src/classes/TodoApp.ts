@@ -13,6 +13,7 @@ export default class TodoApp {
     console.log("TodoApp constructor called");
     console.log(info);
     this.projects = info.projects;
+    this.projects.push(new Project({ name: "Inbox", tasks: [] }));
   }
 
   setProjects(projects: Project[]) {
