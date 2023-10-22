@@ -67,61 +67,6 @@
             flex-basis: 50%;
             text-align: right;
           }
-
-          input[type="checkbox"].prior_no {
-            color: var(--nonary-color);
-          }
-
-          input[type="checkbox"].prior_low {
-            color: var(--tertiary-color);
-          }
-
-          input[type="checkbox"].prior_med {
-            color: var(--quinary-color);
-          }
-
-          input[type="checkbox"].prior_high {
-            color: var(--quaternary-color);
-          }
-
-          input[type="checkbox"] {
-            appearance: none;
-            background-color: #fff;
-            margin: 0;
-            margin-right: 0.5rem;
-            font: inherit;
-            color: currentColor;
-            width: 1.15em;
-            height: 1.15em;
-            border: 0.15em solid currentColor;
-            border-radius: 0.3em;
-            transform: translateY(-0.075em);
-            background: rgba(217, 217, 217, 0);
-            display: grid;
-            place-content: center;
-
-            &::before {
-              content: "✔";
-              display: none;
-              color: #17a600;
-              font-size: 1.2rem;
-              width: 0.65em;
-              height: 0.65em;
-              transform-origin: bottom left;
-              transform: scale(0);
-              transition: 120ms transform ease-in-out;
-            }
-
-            &:checked::before {
-              display: grid;
-              place-content: center;
-              transform: scale(1);
-            }
-
-            &:focus {
-              outline: none;
-            }
-          }
         }
       }
     }
