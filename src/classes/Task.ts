@@ -52,6 +52,6 @@ export default class Task {
   }
 
   getDueDate() {
-    return this.dueDate;
+    return this.dueDate ? this.dueDate : new Date(0);
   }
 }

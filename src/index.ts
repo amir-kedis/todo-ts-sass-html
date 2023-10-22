@@ -1,6 +1,3 @@
-import "./styles.scss";
-import "@fortawesome/fontawesome-free/css/all.css";
+import UI from "./classes/UI";
 
-function main() { }
-
-main();
+UI.init();
