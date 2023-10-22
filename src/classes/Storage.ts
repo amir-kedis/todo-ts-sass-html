@@ -42,6 +42,70 @@ export default class Storage {
     return localStorage.getItem(Storage.LOCAL_STORAGE_KEY) !== null;
   }
 
+  static populateTodoAppWithDefaults() {
+    if (Storage.exists()) {
+      return;
+    }
+
+    const todoApp = new TodoApp({ projects: [] });
+    todoApp.addProjectByName("Inbox");
+    todoApp.addProjectByName("Programming");
+    todoApp.addProjectByName("Life admin");
+    todoApp.addProjectByName("College");
+
+    todoApp.getProject("Programming")?.addTask(
+      new Task({
+        name: "Finish Todo App",
+        description: "Finish the todo app project for The Odin Project",
+        completed: false,
+        dueDate: new Date(),
+        priority: "high",
+      }),
+    );
+
+    todoApp.getProject("Programming")?.addTask(
+      new Task({
+        name: "Finish Calculator",
+        description: "Finish the calculator project for The Odin Project",
+        completed: false,
+        dueDate: new Date(),
+        priority: "high",
+      }),
+    );
+
+    todoApp.getProject("Life admin")?.addTask(
+      new Task({
+        name: "Pay bills",
+        description: "Pay the bills for the month",
+        completed: true,
+        dueDate: new Date(2021, 10, 25),
+        priority: "high",
+      }),
+    );
+
+    todoApp.getProject("Inbox")?.addTask(
+      new Task({
+        name: "Buy groceries",
+        description: "Buy groceries for the week",
+        completed: false,
+        dueDate: new Date(2023, 10, 25),
+        priority: "high",
+      }),
+    );
+
+    todoApp.getProject("Inbox")?.addTask(
+      new Task({
+        name: "Change someones life",
+        description: "Change someones life for the better",
+        completed: false,
+        dueDate: new Date(2023, 9, 23),
+        priority: "high",
+      }),
+    );
+
+    Storage.save(todoApp);
+  }
+
   static getProject(projectName: string) {
     return Storage.getTodoApp().getProject(projectName);
   }
@@ -135,5 +199,21 @@ export default class Storage {
     const todoApp = Storage.getTodoApp();
     todoApp.getProject(project.getName())?.setName(newName);
     Storage.save(todoApp);
+  }
+
+  static getTodayTasks() {
+    return Storage.getTodoApp().getDueTodayTasks();
+  }
+
+  static getThisWeekTasks() {
+    return Storage.getTodoApp().getDueThisWeekTasks();
+  }
+
+  static getTomorrowTask() {
+    return Storage.getTodoApp()?.getTomorrowTasks();
+  }
+
+  static getAllTasks() {
+    return Storage.getTodoApp().getAllTasks();
   }
 }

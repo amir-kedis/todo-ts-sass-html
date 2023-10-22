@@ -1,3 +1,5 @@
+import { toDate } from "date-fns";
+
 type TaskObject = {
   name: string;
   description?: string;
@@ -51,8 +53,11 @@ export default class Task {
     this.dueDate = dueDate;
   }
 
-  getDueDate() {
-    return this.dueDate ? this.dueDate : new Date(0);
+  getDueDate(): Date {
+    if (this.dueDate) {
+      return new Date(this.dueDate);
+    }
+    return new Date(0);
   }
 
   setPriority(priority: "no" | "low" | "medium" | "high") {

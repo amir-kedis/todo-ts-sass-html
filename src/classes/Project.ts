@@ -1,5 +1,5 @@
 import Task from "./Task";
-import { isToday, isThisWeek } from "date-fns";
+import { isToday, isThisWeek, isTomorrow } from "date-fns";
 
 type ProjectObject = {
   name: string;
@@ -61,10 +61,18 @@ export default class Project {
   }
 
   getTasksDueToday() {
-    return this.tasks.filter((task) => isToday(task.getDueDate()));
+    return this.tasks.filter((task) => {
+      console.log(typeof task.getDueDate());
+      console.log(isToday(task.getDueDate()));
+      return isToday(task.getDueDate());
+    });
   }
 
   getTasksDueThisWeek() {
     return this.tasks.filter((task) => isThisWeek(task.getDueDate()));
+  }
+
+  getTasksDueTomorrow() {
+    return this.tasks.filter((task) => isTomorrow(task.getDueDate()));
   }
 }

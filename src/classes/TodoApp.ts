@@ -72,4 +72,12 @@ export default class TodoApp {
   getDueThisWeekTasks() {
     return this.projects.flatMap((project) => project.getTasksDueThisWeek());
   }
+
+  getAllTasks() {
+    return this.projects.flatMap((project) => project.getTasks());
+  }
+
+  getTomorrowTasks() {
+    return this.projects.flatMap((project) => project.getTasksDueTomorrow());
+  }
 }
