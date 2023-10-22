@@ -9,6 +9,43 @@
   padding: 0;
 }
 
+:root {
+  --primary-color: #17a600;
+  --secondary-color: #2983a6;
+  --tertiary-color: #d9dd2c;
+  --quaternary-color: #a61a1a;
+  --quinary-color: #203b9a;
+  --senary-color: #1b1b1b;
+  --septenary-color: #121212;
+  --octonary-color: #333333;
+  --nonary-color: #616161;
+  --primary-font-color: #fff;
+  --primary-font-size: 1.6rem;
+  --secondary-font-size: 1.4rem;
+  --tertiary-font-size: 1.2rem;
+  --quaternary-font-size: 1rem;
+  --quinary-font-size: 0.8rem;
+  --senary-font-size: 0.6rem;
+  --septenary-font-size: 0.4rem;
+  --octonary-font-size: 0.2rem;
+  --nonary-font-size: 0.1rem;
+  --primary-font-weight: 600;
+  --secondary-font-weight: 500;
+  --tertiary-font-weight: 400;
+  --quaternary-font-weight: 300;
+  --quinary-font-weight: 200;
+  --senary-font-weight: 100;
+  --septenary-font-weight: 50;
+  --octonary-font-weight: 25;
+  --nonary-font-weight: 10;
+  --primary-font-family: "Fira Code", monospace;
+}
+
+body {
+  background: #121212;
+  color: #fff;
+}
+
 /* ===================== */
 /* === LAYOUT STYLES === */
 /* ===================== */

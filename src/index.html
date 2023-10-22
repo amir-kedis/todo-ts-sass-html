@@ -57,10 +57,12 @@
     </div>
     <div class="main_content">
       <div class="add_task_box">
-        <input type="text" class="add_task_box__input" placeholder="Add a task..." />
-        <button class="add_task_box__button">
-          <i class="add_task_box__button__icon fa-solid fa-paper-plane"></i>
-        </button>
+        <div class="input_wrraper">
+          <input type="text" class="add_task_box__input" placeholder="Add a task..." />
+          <button class="add_task_box__button">
+            <i class="add_task_box__button__icon fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
         <div class="task_box__modifiers">
           <button class="task_date_modifier">
             <i class="task_date_modifier__icon fa-solid fa-calendar"></i>
@@ -80,19 +82,25 @@
           </div>
           <ul class="task_list__items">
             <li class="task_list__item">
-              <div class="task_list__item__checkbox"></div>
+              <div class="task_list__item__checkbox">
+                <input type="checkbox" class="task_list__item__checkbox__input prior_no" />
+              </div>
               <div class="task_list__item__text">Buy milk</div>
               <div class="task_list__item__date">12sep</div>
               <div class="task_list__item__project">Inbox</div>
             </li>
             <li class="task_list__item">
-              <div class="task_list__item__checkbox"></div>
+              <div class="task_list__item__checkbox">
+                <input type="checkbox" class="task_list__item__checkbox__input prior_high" />
+              </div>
               <div class="task_list__item__text">Do Laundary</div>
               <div class="task_list__item__date">12sep</div>
               <div class="task_list__item__project">Life Admin</div>
             </li>
             <li class="task_list__item">
-              <div class="task_list__item__checkbox"></div>
+              <div class="task_list__item__checkbox">
+                <input type="checkbox" class="task_list__item__checkbox__input prior_med" />
+              </div>
               <div class="task_list__item__text">Study Alx</div>
               <div class="task_list__item__date">12sep</div>
               <div class="task_list__item__project">Programming</div>
