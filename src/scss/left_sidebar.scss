@@ -1,3 +1,18 @@
+/* ===================== */
+/* === SIDEBAR STYLES === */
+/* ===================== */
+.left_side_bar {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #fff;
+
+  .add_project {
+    margin-top: auto;
+  }
+}
 .left_side_bar {
   .title {
     font-size: 1.5rem;
