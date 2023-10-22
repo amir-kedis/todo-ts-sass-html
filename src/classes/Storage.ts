@@ -69,7 +69,7 @@ export default class Storage {
         description: "Finish the calculator project for The Odin Project",
         completed: false,
         dueDate: new Date(),
-        priority: "high",
+        priority: "low",
       }),
     );
 
@@ -79,7 +79,7 @@ export default class Storage {
         description: "Pay the bills for the month",
         completed: true,
         dueDate: new Date(2021, 10, 25),
-        priority: "high",
+        priority: "medium",
       }),
     );
 
@@ -89,7 +89,6 @@ export default class Storage {
         description: "Buy groceries for the week",
         completed: false,
         dueDate: new Date(2023, 10, 25),
-        priority: "high",
       }),
     );
 
@@ -108,6 +107,10 @@ export default class Storage {
 
   static getProject(projectName: string) {
     return Storage.getTodoApp().getProject(projectName);
+  }
+
+  static getProjectByTaskName(taskName: string) {
+    return Storage.getTodoApp().getProjectByTaskName(taskName);
   }
 
   static addProject(project: Project) {
@@ -171,6 +174,17 @@ export default class Storage {
       .getProject(task.getName())
       ?.getTask(task.getName())
       ?.setCompleted(completed);
+    Storage.save(todoApp);
+  }
+
+  static toggleTaskCompleted(taskName: string) {
+    const todoApp = Storage.getTodoApp();
+    const task = todoApp
+      .getAllTasks()
+      .find((task) => task.getName() === taskName);
+    if (task) {
+      task.setCompleted(!task.getCompleted());
+    }
     Storage.save(todoApp);
   }
 

@@ -1,5 +1,3 @@
-import { compareAsc } from "date-fns";
-import Task from "./Task";
 import Project from "./Project";
 
 type TodoAppObject = {
@@ -26,6 +24,12 @@ export default class TodoApp {
 
   getProject(projectName: string) {
     return this.projects.find((project) => project.getName() === projectName);
+  }
+
+  getProjectByTaskName(taskName: string) {
+    return this.projects.find((project) =>
+      project.getTasks().some((task) => task.getName() === taskName),
+    );
   }
 
   containsProject(project: Project) {
